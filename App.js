@@ -1,8 +1,7 @@
-import Principal from "./src/vistas/principal";
+import Routes from "./src/routes/routes";
 
 export default function App() {
-  return(
-    <Principal/>
-  )
+  return (
+    <Routes/>
+  );
 }
-
