@@ -1,5 +1,9 @@
-import { Text } from "react-native";
+import { View, Text } from "react-native";
 
-export default TextWhite = ({ texto }) => {
-  return <Text style={{ color: "white", padding: 3 }}>{texto}</Text>;
+export default TextWhite = ({ texto, size }) => {
+  return (
+    <View>
+      <Text style={{ color: "white", fontSize: size || 20 }}>{texto}</Text>
+    </View>
+  );
 };

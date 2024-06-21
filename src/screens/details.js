@@ -13,7 +13,12 @@ export default Detalle = ({ navigation }) => {
 
       <Text style={{ color: "white" }}>{date}</Text>
       <View style={styles.imagenConainer}>
-        <Image source={{ uri: url }} style={styles.img}/>
+        <Image
+          source={{
+            uri: url,
+          }}
+          style={styles.img}
+        />
       </View>
       <ScrollView style={{ marginVertical: 10, height: "100%" }}>
         <View style={styles.descripcionContainer}>

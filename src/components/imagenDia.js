@@ -8,6 +8,11 @@ export default Card = ({ Data, onPres }) => {
       <Image style={styles.img} source={{ uri: Data.url }} />
       <Text style={styles.texto}>{Data.date}</Text>
       <Link texto="Detalles" onPres={onPres} />
+      {/* <TouchableOpacity onPress={onPres}>
+        <Text style={{ color: "white", alignSelf: "flex-end", padding: 5 }}>
+          Detalles
+        </Text>
+      </TouchableOpacity> */}
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import { Image, StyleSheet, View } from "react-native";
-import TextWhite from "./textwhite";
+import TextWhite from "./textWhite";
 import Link from "./link";
 
 export default ImagenesDias = (props) => {
@@ -13,7 +13,12 @@ export default ImagenesDias = (props) => {
         <Link texto="Detalles" onPres={onPres} />
       </View>
       <View style={styles.rcontainer}>
-        <Image source={{uri: url,}} style={styles.img}/>
+        <Image
+          source={{
+            uri: url,
+          }}
+          style={styles.img}
+        />
       </View>
     </View>
   );

@@ -1,24 +1,23 @@
 import React from "react";
 import Layout from "./layout";
 import Header from "../components/header";
-import Cards from "../components/imageDay";
+import Card from "../components/imagenDia";
 import { useEffect, useState } from "react";
-import requests from "../utility/requests";
+import fech from "../utility/request";
 import { format, sub } from "date-fns";
 import { FlatList, View } from "react-native";
-import ImagenesDiasView from "../components/imageDays";
-import Textwhite from "../components/textwhite";
+import ImagenesDiasView from "../components/imagenesDias";
+import Textwhite from "../components/textWhite";
 import { ActivityIndicator, MD2Colors } from "react-native-paper";
 
 export default Home = ({ navigation }) => {
   const [imagenDia, setImagenDia] = useState({});
   const [imagenesDias, setImagenesDias] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const cargarimagen = async () => {
       try {
-        const res = await requests("");
+        const res = await fech("");
         setImagenDia(res);
       } catch (er) {
         console.log(er);
@@ -74,7 +73,7 @@ export default Home = ({ navigation }) => {
         />
       ) : (
         <>
-          <Cards Data={imagenDia} onPres={() => handleDetalles(imagenDia)} />
+          <Card Data={imagenDia} onPres={() => handleDetalles(imagenDia)} />
           <Textwhite texto="Imagenes de los ultimos 7 dias" />
           <FlatList
             style={{ marginVertical: 5 }}

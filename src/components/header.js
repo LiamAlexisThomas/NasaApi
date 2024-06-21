@@ -8,7 +8,7 @@ export default Header = (props) => {
         <Text style={styles.text}>{texto}</Text>
       </View>
       <View style={styles.imgcontainer}>
-        <Image source={require("../../assets/logonasa.png")} style={styles.img}/>
+        <Image source={require("../../assets/icon.png")} style={styles.img}/>
       </View>
     </View>
   );
