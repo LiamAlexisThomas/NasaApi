@@ -1,12 +1,20 @@
-import {View , StyleSheet} from "react-native"
-import { primaryColor } from "../constants/colors"
+import { SafeAreaView, StyleSheet, View, Platform } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
-export default Layout = ({children}) => {
-    return <SafeAreaView style={styles.container}>
-        <View style={{paddingTop : plataform.OS === "android" && 30}}>{children}</View>
+export default Layout = ({ children }) => {
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="light" />
+      <View style={styles.container}>{children}</View>
     </SafeAreaView>
-}
+  );
+};
 
 const styles = StyleSheet.create({
-    container : {backgroundColor : primaryColor , flex : 1 , paddingHorizontal : 15} 
-})
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" && 10,
+    backgroundColor: "rgb(7,26,93)",
+    paddingHorizontal: 15,
+  },
+});
